@@ -1,0 +1,47 @@
+var mongoose = require('mongoose');
+
+module.exports = new mongoose.Schema({
+     CURP:{
+         type: String,
+         required: true
+     },
+     Nombre:{
+         type: String,
+         required: true
+     },
+     Email:{
+         type: String,
+         required: true
+     },
+     Password:{
+        type: String,
+        required: true,
+        length:16 ,
+        match=
+   
+    },
+    Fecha_nac:{
+        type: date,
+        required: true
+    },
+    Domicilio_calle:{
+        type: String,
+        required: true
+    },
+    CP:{
+        type: String,
+        required: true
+    },
+    Edad:{
+        type: Number
+        ,
+        required: true
+    },
+     comments:[{body:String,date:Date}],
+     date:{type:Date,default:Date.now},
+     hidden:{type:Boolean,default:false},
+     meta:{
+         votes: Number,
+         favs: Number
+     }
+});
