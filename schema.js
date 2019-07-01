@@ -21,7 +21,7 @@ module.exports = new mongoose.Schema({
         type: String,
         required: true,
         length:16 ,
-        match=
+        match: '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/',
    
     },
     fecha_nac:{
